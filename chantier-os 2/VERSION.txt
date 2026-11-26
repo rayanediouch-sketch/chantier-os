@@ -1,0 +1,6 @@
+CHANTIER OS V2.1
+Build: 2026-11-26
+
+Améliorations : dictée vocale continue quand prise en charge par le navigateur, transcription modifiable, capture audio facultative, classement multi-éléments (effectifs, qualité, tâches, interventions), extraction de dates et localisation, conservation des données locales.
+
+Limite : analyse locale par règles métier, pas de modèle IA génératif ni de service cloud. Aucun abonnement, clé API ou paiement requis.

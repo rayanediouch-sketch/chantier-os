@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#142b45" />
+  <meta name="description" content="Assistant personnel de conduite de travaux" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>CHANTIER OS</title>
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">C</div><div><strong>CHANTIER OS</strong><small>ASSISTANT CHANTIER</small></div></div>
+      <div class="project-switch"><span class="eyebrow">CHANTIER ACTIF</span><strong id="projectNameSide">Espace Bertel</strong><span class="status-dot">● En cours</span></div>
+      <nav id="sideNav" class="nav-list"></nav>
+      <div class="sidebar-bottom"><div class="offline-pill"><span></span> Données locales</div><button class="nav-item" data-view="settings"><span class="nav-icon">⚙</span> Paramètres & sauvegarde</button></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div class="mobile-brand"><div class="brand-mark">C</div><strong>CHANTIER OS</strong></div><div class="breadcrumb"><span>Chantier</span><b>/</b><strong id="pageTitle">Vue d'ensemble</strong></div><div class="top-actions"><span class="connection"><i></i> Mode local</span><button class="icon-button" id="quickSearch" aria-label="Recherche">⌕</button><button class="avatar" title="Profil">R</button></div></header>
+      <section id="content" class="content"></section>
+    </main>
+  </div>
+  <nav class="mobile-nav" id="mobileNav"></nav>
+  <button class="fab" id="fab" aria-label="Ajouter">＋</button>
+  <div id="modalRoot"></div>
+  <div id="toastRoot" class="toast-root"></div>
+  <script src="app.js"></script>
+  <script>if ('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));</script>
+</body>
+</html>
